@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wordlebot-339620",
+  "private_key_id": "d490b7697bbc9d21f02ccd8b2a56f98bd911ae94",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3yG8NDoMcQ1a+\n8cDJ3lbxT2Zx95WAJRViWF940p7AvAAvq86evTsjKhOQqgm8ceQ7uD6i/4ZEF9bA\n0A3rD3KG/v2j51/GsUs34Zx1mxnmvXNePriy2kiOUFwGlfzaRT9nf9SqtLM0pjh8\nZDVP5339lquJ/76J76Y/rq7n7sDeJJtN3qJaSjH3+ctTOfQpXaMlIyv+gnx1v1CS\nfMu5VerQxfqgIVkGm9EG05wY5MlIm5ynRyTj1pgXcVpSxkuf3J8o8ODHLWSK8sSN\nme8/XYWJ3Af3SBlIuPl1mS70U2xtgDVgupV4EVh+/nnFlXR8U+lYxcJxOW67DpbA\nMaDrLiWnAgMBAAECggEAA6M5eM+FOSgnYuR5FZB2Nb+FvmgRSEsznFHgeI0+rCpB\nx1pwtAP4ftkvMElVTlVjbZUs1DVs4b3RDS7xCj/bhfWCbV3qhOMZzd4u0RsZTPpf\nUAm7cSV7PdSJsG2ukV7BLa9s36tvnUapo+NTNM+BrGUbjxcwnR1RCT36uJzT/3GU\naIBlcWUpGf56+QDzKqPAzHRndBRK9UFTKVbSjpZVoNTHuidjli0z0LzgsYnY8ose\nWlOXHkwztn0WVj8iOA80mb+2HLf9s4hw2CLd5UE4aBra6jbYabcbGelM7SxUi5/J\ng6TrG2JcmYh66SEMnMaEriDY5A9c5wtxoacqH+E68QKBgQDxghV0KAm9en0loBMc\n0Lq1smOpTmZNC8lg2Kj7gBsjgsJGLe+7xZvj8veKaprbrGYIQ9sDWjHQ81ztjK25\n0dijHohmS7k9ytLSIGqWPIW0RC2d0UnLPm4PO92USdqxmFfy0WS55e5FniedmQtX\n4wqiaeT4EsJBBX7ehuUR/o0xNwKBgQDCz5tnzH7rAM8uLDXW3jo+a7O4Z3fqCOfg\nAQJgV5PftgE59/GGlAdDO+rJEkXinOMS1jo2Jnnq0wHPOFYeHh971ftvcbrrFE0A\nKQYHYa5oP73vlBCqnqpngi5MYz4BykUlGh7xpcei94TnXmEMJ4TrXX041t3gGhPQ\nFZ5OcmWnEQKBgQCAL1x1v76TvIzqSJF8bOl9AUdWmM9Bu6zSY40lmHRPH9s/5qfl\nEVjR36c156l0SYgKgQGhQOFKF7HOQCoBg/kpc05QhYa33oyRjTUlstAAw2M27dvu\nLZ+7JDpSt/SE6OhdcHi3FuymNPCv/IiByHdfhzdJ2KMUYfdZ4114dJS6dwKBgFCB\nUNx9Urm09OlE1d78qR8gjP2YrKJnmcMlR6Eer/pUEX+uKf6Ob83mFemQBpdWdDRV\nmWrFTb6wAmBrDJOXqTUYwbZVToRVOFjnmxkz0co9BTXbf2Oy/AKYdp+Up4w/1YE2\noTEFbFG5bg/bHcnTDwfg852olbpFrIhiVrBecAmxAoGAYVP53Ro+Um5L/2IfVTu4\nsbfc7EiNya176wAKqLPKho1Ia04b8+4ehiexyLUTd6mMz5XI2rCy/tHI4F7sMNqh\neGMMPvw9NHz8djEOJTWMQDsXnDPa+JFOb3vjXWtHIx5ncYacXierENISeQ0DPJzN\n7jebHdc+gKrhquCanUV8Ogk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "wordlebot@wordlebot-339620.iam.gserviceaccount.com",
+  "client_id": "111659415928204632899",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wordlebot%40wordlebot-339620.iam.gserviceaccount.com"
+}
