@@ -1,36 +1,51 @@
-import pygsheets
-from googleapiclient.discovery import build 
-import pandas as pd
+from fileinput import filename
+import gspread
+import datetime
+currMonth = datetime.datetime.now().strftime("%B")
 
-# Google API set up
-from google.oauth2 import service_account
-SCOPES = [
-'https://www.googleapis.com/auth/spreadsheets',
-'https://www.googleapis.com/auth/drive'
-]
-authFile = 'C:\\Users\\Travi\\Documents\\Code\\wordleBot\\assets\\googleAuthWordleBot.json'
-credentials = service_account.Credentials.from_service_account_file(authFile, scopes=SCOPES)
-spreadsheet_service = build('sheets', 'v4', credentials=credentials)
-drive_service = build('drive', 'v3', credentials=credentials)
+### sign into g-account and access the sheets
+sa = gspread.service_account(filename="C:\\Users\\Travi\\Documents\\Code\\wordleBot\\assets\\wordle_write_credentials.json")
+sh = sa.open("Wordle")
+wk = sh.worksheet(currMonth)
+players = wk.row_values(2)
+wordles = wk.col_values(3)
+abc = "0abcdefghijklmnopqrstuvwxyz".upper()
 
-# authFile = 'C:\\Users\\Travi\\Documents\\Code\\wordleBot\\assets\\clientSecretsWordleBot.json'
-gc = pygsheets.authorize(authFile)
-
-# Create empty dataframe
-df = pd.DataFrame()
-
-# Create a column
-df['name'] = ['John', 'Steve', 'Sarah']
-
-#open the google spreadsheet (where 'PY to Gsheet Test' is the name of my sheet)
-sh = gc.open('wordle bot test env')
-
-#select the first sheet 
-wks = sh[0]
-
-#update the first sheet with df, starting at cell B2. 
-wks.set_dataframe(df,(1,1))
-
-
-
-###### current todo: download secret from OAuth 2.0 Client ID table when it becomes available (?)
+## this allows the bot to refresh the wksheet with every input (keeps it fresh ya dig)
+def updateWK():
+    players = wk.row_values(2)
+    wordles = wk.col_values(3)
+    
+### ugly as fuck but whatever, inputs the silly number and does it fine
+def wordleDetected(targetPlayer, points, wordleNum):
+    updateWK()
+    # gets the row # of the current wordle
+    currWordle = 0
+    if str(wordleNum) in wordles:
+        for wordle in range(len(wordles)):
+            if wordles[currWordle] == wordleNum:
+                currWordle=currWordle+1
+                print(currWordle)
+                break
+            else:
+                currWordle=currWordle+1
+    ### adds the day's wordle if not already added
+    else:
+        currWordle = len(wordles)+1
+        wk.update('C'+str(currWordle), wordleNum)
+    ### updates the player now
+    try:
+        playerIndex = 1
+        for index in range(len(players)):
+            if players[index] == targetPlayer:
+                playerColumn = abc[playerIndex]
+                break
+            else:
+                playerIndex=playerIndex+1
+        matrix =  playerColumn+str(currWordle)
+        wk.update(matrix, int(points))
+        return "sheets page epically updated"
+    except:
+        print(targetPlayer)
+        print(players)
+        return "travis did not consider this edge case. update failed."
