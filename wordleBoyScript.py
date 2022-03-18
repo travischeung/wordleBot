@@ -116,14 +116,6 @@ async def monthEnd(ctx):
         msg.add_field(name="{}".format(winner[0]), value="Average of Avg: {}".format(memberDict[1]), inline=True)
         await ctx.send(embed=msg)
 
-
-
-
-
-
-
-
-
 schedule.every().day.at("23:59").do(missedSubmission)
 schedule.every().day.at("23:59").do(monthEnd)
 
