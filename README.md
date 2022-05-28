@@ -23,4 +23,6 @@ run the following:
 
 ```pip3 install schedule``` 
 
+```pip3 install google-api-python-client``` 
+
 You also need to get a DISCORDTOKEN to run the bot, as well as a security JSON for the Sheets API to work.
